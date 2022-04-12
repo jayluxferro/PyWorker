@@ -1,6 +1,13 @@
 ## PyWorker
 PyWorker is a simple implementation of a worker-pool process.
 
+### Installation
+
+```
+pip install git+https://github.com/jayluxferro/PyWorker
+```
+
+
 ### Test Implementation
 ```python
 from pyworker import PyWorker
