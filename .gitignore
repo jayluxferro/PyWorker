@@ -66,9 +66,6 @@ fastlane/screenshots
 /*.save
 /__pycache__
 
-# ignore media files
-media/*
-assets/images/users/
-/tmp
-#/dummy
-/uploads/*.txt
+# ignore pypi dev files
+.venv/
+dist/
