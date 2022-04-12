@@ -69,3 +69,4 @@ fastlane/screenshots
 # ignore pypi dev files
 .venv/
 dist/
+*.egg-info/
