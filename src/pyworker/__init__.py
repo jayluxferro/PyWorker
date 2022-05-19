@@ -46,8 +46,9 @@ class PyWorker():
         for item in task_items:
             self.q.put(item)
 
-    def run(self, task, task_items, worker_pool=1):
+    def run(self, task, task_items, worker_pool=1, wait_time=1):
         self.worker_pool = worker_pool
+        self.wait_time = wait_time
         for i in range(self.worker_pool):
             t = threading.Thread(target=self.worker, args=(task,))
             t.start()
@@ -62,7 +63,7 @@ class PyWorker():
             if item is None:
                 break
             task(item)
-            sleep(1)
+            sleep(self.wait_time)
             self.q.task_done()
 
     def wait(self):
